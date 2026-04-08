@@ -1,13 +1,21 @@
 body {
   text-align: center;
   font-family: Arial, sans-serif;
-  background: #f0f0f0;
+  background: #bb5d5d;
   margin: 0;
   padding: 20px;
 }
 
 h1 {
   margin-bottom: 5px;
+  color: rgb(53, 50, 229);
+  padding: 10px;
+}
+
+p {
+  margin-top: 0;
+  color: rgb(153, 213, 233);
+  font-size: 18px;
 }
 
 .panel {
@@ -19,7 +27,7 @@ h1 {
 }
 
 canvas {
-  background: white;
+  background: rgb(193, 222, 140);
   border: 2px solid black;
 }
 
