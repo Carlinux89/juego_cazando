@@ -1,9 +1,6 @@
 let canvas = document.getElementById("areaJuego");
 let ctx = canvas.getContext("2d");
-let btnArriba = document.getElementById("btnArriba");
-let btnAbajo = document.getElementById("btnAbajo");
-let btnIzquierda = document.getElementById("btnIzquierda");
-let btnDerecha = document.getElementById("btnDerecha");
+
 //variables
 //gato
 let gatoX = 0;
@@ -32,7 +29,6 @@ function graficarComida() {
     graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#ff0000");
 }
 
-
 function iniciarJuego() {
     gatoX = (canvas.width / 2) - (ANCHO_GATO / 2);
     gatoY = (canvas.height / 2) - (ALTO_GATO / 2);
@@ -53,4 +49,4 @@ document.getElementById("btnAbajo").onclick = () => mover("abajo");
 document.getElementById("btnIzquierda").onclick = () => mover("izquierda");
 document.getElementById("btnDerecha").onclick = () => mover("derecha");
 
-iniciarJuego();
+
