@@ -46,9 +46,18 @@ function mover(direccion) {
     graficarGato();
 }
 
+function limpiarCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function moverIzquierda() {
+    gatoX -= 10;
+    limpiarCanvas();
+    graficarGato();
+    graficarComida();
+}
+
 document.getElementById("btnArriba").onclick = () => mover("arriba");
 document.getElementById("btnAbajo").onclick = () => mover("abajo");
-document.getElementById("btnIzquierda").onclick = () => mover("izquierda");
+document.getElementById("btnIzquierda").onclick = () => moverIzquierda();
 document.getElementById("btnDerecha").onclick = () => mover("derecha");
-
-
