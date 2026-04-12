@@ -8,10 +8,12 @@ let gatoY = 0;
 //comida
 let comidaX = 0;
 let comidaY = 0;
-
 //puntos
 let puntos = 0;
-
+//tiempo
+let tiempo = 10;
+//intervalo
+let intervalo;
 //constantes
 const ANCHO_GATO = 50;
 const ALTO_GATO = 50;
@@ -36,6 +38,7 @@ function graficarComida() {
 }
 
 function iniciarJuego() {
+    intervalo = setInterval(restarTiempo, 1000);
     gatoX = (canvas.width / 2) - (ANCHO_GATO / 2);
     gatoY = (canvas.height / 2) - (ALTO_GATO / 2);
     //comidaX = canvas.width - ANCHO_COMIDA;
@@ -109,10 +112,18 @@ function detectarColision() {
         gatoX + ANCHO_GATO > comidaX &&
         gatoY < comidaY + ALTO_COMIDA &&
         gatoY + ALTO_GATO > comidaY) {
-        alert("Deliciosa Comida!!\u{1F601}");
+        //alert("Deliciosa Comida!!\u{1F601}");
         aparecerComida();
-        puntos++;
+        puntos += 1;
         mostrarEnSpan("puntos", puntos);
+        if (puntos == 6) {
+            clearInterval(intervalo);
+            alert("Deliciosa Comida!!\u{1F601}\n¡GANASTE!! \u{1F389} ");
+            puntos = 0;
+            tiempo = 10;
+            mostrarEnSpan("puntos", puntos);
+            mostrarEnSpan("tiempo", tiempo);
+        }
     }
 }
 
@@ -122,9 +133,30 @@ function aparecerComida() {
     actualizarPantalla();
 }
 
+function restarTiempo() {
+    tiempo -= 1;
+    mostrarEnSpan("tiempo", tiempo);
+    if (tiempo === 0) {
+        clearInterval(intervalo);
+        alert("¡GAME OVER!! \u{1F61E}");
+        puntos = 0;
+        tiempo = 10;
+        mostrarEnSpan("puntos", puntos);
+        mostrarEnSpan("tiempo", tiempo);
+    }
+}
 
+function reiniciar() {
+    clearInterval(intervalo);
+    puntos = 0;
+    tiempo = 10;
+    mostrarEnSpan("puntos", puntos);
+    mostrarEnSpan("tiempo", tiempo);
+    iniciarJuego();
+}
 
 document.getElementById("btnArriba").onclick = () => moverArriba();
 document.getElementById("btnAbajo").onclick = () => moverAbajo();
 document.getElementById("btnIzquierda").onclick = () => moverIzquierda();
 document.getElementById("btnDerecha").onclick = () => moverDerecha();
+document.getElementById("btnReiniciar").onclick = () => reiniciar();
