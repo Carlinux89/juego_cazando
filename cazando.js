@@ -58,6 +58,7 @@ function moverIzquierda() {
         limpiarCanvas();
         graficarGato();
         graficarComida();
+        detectarColision();
     }
 
 }
@@ -68,6 +69,7 @@ function moverDerecha() {
         limpiarCanvas();
         graficarGato();
         graficarComida()
+        detectarColision();
     }
     ;
 }
@@ -78,6 +80,7 @@ function moverArriba() {
         limpiarCanvas();
         graficarGato();
         graficarComida();
+        detectarColision();
     }
 }
 
@@ -87,6 +90,16 @@ function moverAbajo() {
         limpiarCanvas();
         graficarGato();
         graficarComida();
+        detectarColision();
+    }
+}
+
+function detectarColision() {
+    if (gatoX < comidaX + ANCHO_COMIDA &&
+        gatoX + ANCHO_GATO > comidaX &&
+        gatoY < comidaY + ALTO_COMIDA &&
+        gatoY + ALTO_GATO > comidaY) {
+        alert("Deliciosa Comida!!\u{1F601}");
     }
 }
 
