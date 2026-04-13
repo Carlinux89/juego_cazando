@@ -11,7 +11,7 @@ let comidaY = 0;
 //puntos
 let puntos = 0;
 //tiempo
-let tiempo = 10;
+let tiempo = 30;
 //intervalo
 let intervalo;
 //constantes
@@ -120,7 +120,7 @@ function detectarColision() {
             clearInterval(intervalo);
             alert("Deliciosa Comida!!\u{1F601}\n¡GANASTE!! \u{1F389} ");
             puntos = 0;
-            tiempo = 10;
+            tiempo = 30;
             mostrarEnSpan("puntos", puntos);
             mostrarEnSpan("tiempo", tiempo);
         }
@@ -140,7 +140,7 @@ function restarTiempo() {
         clearInterval(intervalo);
         alert("¡GAME OVER!! \u{1F61E}");
         puntos = 0;
-        tiempo = 10;
+        tiempo = 30;
         mostrarEnSpan("puntos", puntos);
         mostrarEnSpan("tiempo", tiempo);
     }
@@ -149,7 +149,7 @@ function restarTiempo() {
 function reiniciar() {
     clearInterval(intervalo);
     puntos = 0;
-    tiempo = 10;
+    tiempo = 30;
     mostrarEnSpan("puntos", puntos);
     mostrarEnSpan("tiempo", tiempo);
     iniciarJuego();
