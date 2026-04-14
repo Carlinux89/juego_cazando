@@ -1,0 +1,37 @@
+//prompt 1
+vamos a agregar imagenes al proyecto, te recuerdo que es para niños, necesito una imagen que sea acorde, dame sugerencias para revisar y decirte cual aplicar
+//prompt 2
+opcion 2, pero con un pequeño cambio,  considera que los personajes son gato y comida
+Opción 2: Animales amigables
+Un enfoque más infantil y emocional.
+Ejemplos:
+
+Pollito
+Gatito
+Perrito
+Dinosaurio pequeño (muy popular en esa edad)
+
+Uso recomendado:
+
+Personaje que “caza” la comida
+O imagen decorativa estática
+
+Ventaja:
+
+Genera empatía rápida
+Motiva a seguir jugando
+//prompt 3
+quiero ver la opcion B
+
+Opción B — Canvas + imagen decorativa pequeña
+
+Gato dentro del canvas
+Una imagen pequeña arriba o al lado como identidad del juego
+
+👉 Más “juego”, sigue siendo minimalista si es pequeña.
+//promt 4
+un pequeño cambio, quiero un fondo de pantalla del anime Doraemon y para los personajes Doreamon y Lobita
+//prompt 5
+un pequeño cambio, quiero un fondo de pantalla del anime Doraemon y para los personajes Doreamon y Lobita
+//prompt 6
+los personajes son gato (Dorameon) y comida (Lobita), haz este cambio y pasame el codigo CSS.
