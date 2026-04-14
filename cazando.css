@@ -1,50 +1,97 @@
+/* ===== ESTILOS GENERALES ===== */
 body {
-  text-align: center;
-  font-family: Arial, sans-serif;
-  background: #bb5d5d;
   margin: 0;
   padding: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  /* fondo neutro */
 }
 
+/* ===== TÍTULO ===== */
 h1 {
-  margin-bottom: 5px;
-  color: rgb(53, 50, 229);
-  padding: 10px;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 4px;
 }
 
+/* ===== TEXTO GENERAL ===== */
 p {
+  font-size: 16px;
+  color: #555;
   margin-top: 0;
-  color: rgb(153, 213, 233);
-  font-size: 18px;
 }
 
+/* ===== CONTENEDOR DEL CANVAS ===== */
+.contenedor {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== ÁREA DE JUEGO (PROTAGONISTA) ===== */
+canvas {
+  background: #ffffff;
+  border: 3px solid #4caf50;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== PANEL DE INFORMACIÓN ===== */
 .panel {
   margin: 15px 0;
   font-size: 18px;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
+  color: #333;
 }
 
-canvas {
-  background: rgb(193, 222, 140);
-  border: 2px solid black;
+#puntos,
+#tiempo {
+  font-weight: bold;
+  color: #4caf50;
 }
 
+/* ===== CONTROLES ===== */
 .controles {
   margin-top: 20px;
 }
 
+/* ===== BOTONES ===== */
 button {
-  margin: 5px;
+  margin: 6px;
   padding: 10px 16px;
   font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  /* semiredondo */
+  background: #e0e0e0;
+  color: #333;
   cursor: pointer;
+  transition: box-shadow 0.2s, background 0.2s;
 }
 
+/* Hover simple, sin exagerar */
+button:hover {
+  background: #d5d5d5;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón reiniciar ligeramente destacado */
+#btnReiniciar {
+  background: #4caf50;
+  color: white;
+}
+
+#btnReiniciar:hover {
+  background: #43a047;
+}
+
+/* ===== MENSAJE ===== */
 #mensaje {
   font-size: 20px;
+  color: #d32f2f;
   font-weight: bold;
-  color: darkred;
   margin-top: 15px;
 }

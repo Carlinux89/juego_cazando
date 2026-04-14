@@ -1,0 +1,10 @@
+//prompt 1
+soy estudiante principiante primer nivel en desarrollo de software web, actua como tutor en programacion web, estoy desarrollando un taller un juego basico cazando comida, necesito mejorar mi diseño CSS de mi proyecto.
+//prompt 2
+yo te voy a proporcionar mis codigos para que revises y juntos vayamos mejorando. No generes informacion y codigo hasta que estemos de acuerdo
+//prompt 3
+vamos a modificar el CSS de acuerdo a este requerimiento: diseño minimalista para experiencia al usuario y enfoca para niños en rango de edad entre 8-12 años, utiliza tres paletas de colores, sombrea cuando el mouse toque el area del botones, los objetos (rectangulos) tengan borde semiredondo.
+//prompt 4
+ahora vamos a enfocarnos en el tipo de letra, color, tamaño con el fin de que el usuario (niños) puedan leer y entender el juego
+//prompt 5
+no me gusto los cambios ya que el area de canvas se perdio, manten el diseño minimalista UX
