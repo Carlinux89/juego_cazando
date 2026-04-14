@@ -28,10 +28,8 @@ p {
 
 /* ===== CONTENEDOR DEL CANVAS ===== */
 .contenedor {
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
   position: relative;
+  display: inline-block;
 }
 
 /* ===== ÁREA DE JUEGO (PROTAGONISTA) ===== */
@@ -46,15 +44,20 @@ canvas {
 /* ===== PANEL DE INFORMACIÓN ===== */
 .panel {
   position: absolute;
-  top: 250px;
-  left: 10px;
-  font-size: 20px;
+
+  /* Punto morado (AJUSTABLE) */
+  top: 16%;
+  left: 25%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
+  gap: 6px;
+  font-size: 18px;
   color: #200d9c;
+  padding: 8px 12px;
+  border-radius: 10px;
+
 }
+
 
 #puntos,
 #tiempo {
@@ -103,4 +106,9 @@ button:hover {
   color: #452fd3;
   font-weight: bold;
   margin-top: 15px;
+}
+
+html,
+body {
+  overflow: hidden;
 }
