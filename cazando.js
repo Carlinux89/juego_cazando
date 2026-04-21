@@ -5,6 +5,9 @@ let ctx = canvas.getContext("2d");
 //gato
 let gatoX = 0;
 let gatoY = 0;
+// imagen del gato
+let imagenGato = new Image();
+imagenGato.src = "gato.png";
 //comida
 let comidaX = 0;
 let comidaY = 0;
@@ -30,9 +33,14 @@ function graficarRectangulo(x, y, ancho, alto, color) {
     ctx.fillRect(x, y, ancho, alto);
 }
 
+// function graficarGato() {
+//     //graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#040457");
+// }
+
 function graficarGato() {
-    graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#040457");
+    ctx.drawImage(imagenGato, gatoX, gatoY, ANCHO_GATO, ALTO_GATO);
 }
+
 
 function graficarComida() {
     graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#ff0000");
@@ -44,8 +52,8 @@ function iniciarJuego() {
     gatoY = (canvas.height / 2) - (ALTO_GATO / 2);
     //comidaX = canvas.width - ANCHO_COMIDA;
     //comidaY = canvas.height - ALTO_COMIDA;
-    graficarGato();
     aparecerComida();
+    actualizarJuego();
 }
 
 function mover(direccion) {
@@ -162,8 +170,44 @@ function reiniciar() {
     iniciarJuego();
 }
 
+function actualizarJuego() {
+    // limpiar canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // dibujar elementos
+    graficarGato();
+    graficarComida(); // si ya tienes comida
+
+    requestAnimationFrame(actualizarJuego);
+}
+
+
 document.getElementById("btnArriba").onclick = () => moverArriba();
 document.getElementById("btnAbajo").onclick = () => moverAbajo();
 document.getElementById("btnIzquierda").onclick = () => moverIzquierda();
 document.getElementById("btnDerecha").onclick = () => moverDerecha();
 document.getElementById("btnReiniciar").onclick = () => reiniciar();
+
+// CONTROL CON TECLADO
+document.addEventListener("keydown", function (event) {
+
+    switch (event.key) {
+
+        case "ArrowUp":
+            moverArriba();
+            break;
+
+        case "ArrowDown":
+            moverAbajo();
+            break;
+
+        case "ArrowLeft":
+            moverIzquierda();
+            break;
+
+        case "ArrowRight":
+            moverDerecha();
+            break;
+    }
+
+});
