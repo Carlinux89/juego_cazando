@@ -12,6 +12,7 @@ let comidaY = 0;
 let puntos = 0;
 //tiempo
 let tiempo = 15;
+let tiempoReducido = tiempo;
 //intervalo
 let intervalo;
 //constantes
@@ -115,7 +116,7 @@ function detectarColision() {
         //alert("Deliciosa Comida!!\u{1F601}");
         aparecerComida();
         puntos += 1;
-        if (puntos > 1) {
+        if (puntos > 0) {
             tiempo = 15
         }
         mostrarEnSpan("puntos", puntos);
@@ -138,6 +139,9 @@ function aparecerComida() {
 
 function restarTiempo() {
     tiempo -= 1;
+    if (tiempo > 1) {
+        tiempo--;
+    }
     mostrarEnSpan("tiempo", tiempo);
     if (tiempo === 0) {
         clearInterval(intervalo);
