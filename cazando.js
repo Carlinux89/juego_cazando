@@ -115,6 +115,9 @@ function detectarColision() {
         //alert("Deliciosa Comida!!\u{1F601}");
         aparecerComida();
         puntos += 1;
+        if (puntos > 1) {
+            tiempo = 15
+        }
         mostrarEnSpan("puntos", puntos);
         if (puntos == 6) {
             clearInterval(intervalo);
