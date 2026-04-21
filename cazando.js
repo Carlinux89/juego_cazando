@@ -11,6 +11,8 @@ imagenGato.src = "gato.png";
 //comida
 let comidaX = 0;
 let comidaY = 0;
+let imagenComida = new Image();
+imagenComida.src = "comida.png";
 //puntos
 let puntos = 0;
 //tiempo
@@ -42,8 +44,12 @@ function graficarGato() {
 }
 
 
+// function graficarComida() {
+//     graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#ff0000");
+// }
+
 function graficarComida() {
-    graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#ff0000");
+    ctx.drawImage(imagenComida, comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA);
 }
 
 function iniciarJuego() {
